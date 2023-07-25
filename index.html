@@ -8,22 +8,64 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/8eeade2299.js" crossorigin="anonymous"></script>
     <script>
-        tailwind.config = {
-          theme: {
+tailwind.config = {
+        theme: {
             extend: {
-              colors: {
-                backgroundImages: 
-                'hero-bg:url(".asset/images/banner.png")',
-              }
+            backgroundImage: {
+                'hero-bg': "url('./asset/images/banner.png')",
+            },
+            colors: {
+                'gray-text': '#707070',
+                'btn-color': '#B68C5A',
+                'ju-title': '#414040',
             }
-          }
+            },
+        },
         }
       </script>
 
 </head>
 <body>
-    <header>
-        
+    <header class="container m-auto ">
+        <!-- NavBar section -->
+        <nav class=" grid md:grid-cols-3 justify-center md:justify-between items-center py-5">
+            <div class="text-center">
+                    <img class="md:m-0 m-auto" src="./asset/images/logo2.png" alt="">
+            </div>
+            <div class="text-gray-text font-bold text-center py-4 md:py-0">
+                <a class="pr-2 md:pr-4" href="">Home</a>
+                <a class="pr-2 md:pr-4" href="">Services
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a class="pr-2 md:pr-4" href="">Cases
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a class="pr-2 md:pr-4" href="">Blog
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="">Contact Us
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="md:text-end text-center">
+                <button class="btn bg-btn-color font-semibold text-white hover:bg-btn-color">Free Consultation</button>
+
+            </div>
+        </nav>
+        <!-- banner section -->
+        <div>
+            <div class="hero min-h-[calc(100vh-88px)] bg-hero-bg">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="md:w-3/5 w-11/12">
+                    <h1 class="mb-5 text-5xl font-bold text-white">We Provide Effective Legal Solutions</h1>
+                    <p class="mb-5 text-stone-200">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <input type="search" name="" id="" class="input mr-4 md:pr-52" placeholder="Search your services">
+                    <button class="btn bg-btn-color text-white hover:bg-btn-color border-0 px-8">Search</button>
+                  </div>
+                </div>
+              </div>
+        </div>
     </header>
     <main></main>
     <footer></footer>
